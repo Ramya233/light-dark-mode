@@ -1,0 +1,73 @@
+What did you learn in this project ?
+
+1) Color pallets, contrast, etc -> article
+2) Colors are set
+3) set a background pattern from hero patterns -> adjust colors 
+4) make all the html and clicking on the navigation should get to that pattern
+   simple, just add the section name in the href of the anchor tag.
+5) custome google fonts
+6)undram illustrations for the second section -> you will have to have 
+ 2 version of the image, dark and light
+7) font awesome for social media icons
+
+--------------------------------Javascript----------------------------
+1)select -> input[type="checkbox"],  
+2)See how to check all the events in the event listeners
+  you can always console.log(e) to see the events
+3) make a function switchTheme()
+4) event.target.checked -> true/false -> when it is true we want our
+when the boolean is checked we want our dark mode, when unchecked we
+want the light mode.
+5) In css we had 2 different sets of colors -> 
+  when our data-theme is set to dark we are switching to different colors
+
+6) To do the above -> we will have to set that attribute to the highest
+  level of our html (mozilla -> Document.documentElement) returns the 
+  element that is the root element of the document (the html element for html documents)
+  
+  we have to set the attribute of the dark theme on that element
+
+  document.documentElement.setAttribute('data-theme', 'dark');
+  else ('light')
+
+7)Now everything has changed in color -> only a few things haven't
+  Now we'll manually change everything that hasn't 
+  -> we make constants for everything that has to change
+
+ -> nav, toggle-icon,images, tex-box js elements 
+
+ -> Now we need 2 different functions darkmode() and lightmode() 
+    within the switchTheme(so the few things that haven't changed also change)
+
+8)create 2 functions lightmode and darkmode
+  console.log(toggleIcon.children)
+  Also add the function that changes the colors of the image in the 
+  darkmode and lightmode respectively
+
+9)Make a function called imageColor() that changes the color of the image
+  when in dark mode
+
+10) Now you will see that when you switch the mode -> you are still seeing
+   that dark mode written and the dark mode images 
+   for this we create lightmode function
+
+
+11) Now we add local storage data -> it allows you to store data between 
+   sessions , when you turn off your computer and come back a week later
+   your local storage data will still be there.
+
+   we set a value and then get a value
+    localStorage.setItem('theme', 'dark');
+  
+  const currentTheme = localStorage.getItem('theme');
+  console.log(currentTheme); -> null (to address this we need to have something
+  in default)
+
+  Now at some point we have stored the dark theme in the local storage,
+  but after refreshing we are still getting the light mode.
+
+  so we use the if statements and say -> if that mode exists then set the
+  theme.
+  
+ 
+
